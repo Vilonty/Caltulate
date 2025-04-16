@@ -1,15 +1,15 @@
-import themeStyles from '../../../../styles/MainPage/ThemeButton.module.css';
-import historyStyles from '../../../../styles/MainPage/Calculator/HistoryPanel.module.css';
+import historyStyles from '../../../../styles/MainPage/Calculator/CalcBlock/HistoryPanel.module.css';
+import classNames from 'classnames'; 
 
 export const HistoryPanel = ({ history, onClearHistory, onSelectHistory, theme }) => {
   return (
-    <div className={`${historyStyles.HistoryPanel} ${historyStyles[theme]}`}>
-      <div className={`${historyStyles.HistoryHeader} ${historyStyles[theme]}`}>
+    <div className={classNames(historyStyles.HistoryPanel, historyStyles[theme])}>
+      <div className={classNames(historyStyles.HistoryHeader, historyStyles[theme])}>
         <h3>История вычислений</h3>
         <button onClick={onClearHistory}>Очистить</button>
       </div>
       <div className={historyStyles.HistoryListContainer}>
-        <div className={`${historyStyles.HistoryListWrapper} ${historyStyles[theme]}`}>
+        <div className={classNames(historyStyles.HistoryListWrapper, historyStyles[theme])}>
           <ul className={historyStyles.HistoryList}>
             {history.map((item, index) => (
               <li key={index} onClick={() => onSelectHistory(item)}>
