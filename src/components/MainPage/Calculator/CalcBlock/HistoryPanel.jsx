@@ -1,3 +1,4 @@
+import styles from '../../../../styles/MainPage/ThemeButton.module.css';
 export const HistoryPanel = ({ history, onClearHistory, onSelectHistory, theme }) => {
   return (
     <div className={`${styles.HistoryPanel} ${styles[theme]}`}>
