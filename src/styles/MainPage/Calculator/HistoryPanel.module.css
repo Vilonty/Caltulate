@@ -1,0 +1,243 @@
+.HistoryPanel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Темы */
+.HistoryPanel.light {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.HistoryPanel.dark {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+}
+
+.HistoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid;
+}
+
+.HistoryHeader.light {
+    background-color: #f5f5f5;
+    border-bottom-color: #e0e0e0;
+}
+
+.HistoryHeader.dark {
+    background-color: #252525;
+    border-bottom-color: #444;
+}
+
+.HistoryHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.HistoryHeader.light h3 {
+    color: #333;
+}
+
+.HistoryHeader.dark h3 {
+    color: #f0f0f0;
+}
+
+.HistoryHeader button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.HistoryHeader.light button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.HistoryHeader.dark button {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+.HistoryHeader button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.HistoryList1 {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.HistoryList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+.HistoryList li {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
+}
+
+.HistoryList.light li {
+    border-bottom-color: #f0f0f0;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.HistoryList.dark li {
+    border-bottom-color: #3a3a3a;
+    color: #f0f0f0;
+    background-color: #2d2d2d;
+}
+
+.HistoryList li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.HistoryList.dark li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.HistoryList li:active {
+    transform: scale(0.98);
+}
+
+.HistoryCalculation {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.HistoryList.light .HistoryCalculation {
+    color: #666;
+}
+
+.HistoryList.dark .HistoryCalculation {
+    color: #aaa;
+}
+
+.HistoryResult {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.HistoryList.light .HistoryResult {
+    color: #2e7d32;
+}
+
+.HistoryList.dark .HistoryResult {
+    color: #4caf50;
+}
+
+.HistoryTime {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.HistoryList.light .HistoryTime {
+    color: #666;
+}
+
+.HistoryList.dark .HistoryTime {
+    color: #aaa;
+}
+
+/* Кастомный скроллбар */
+.HistoryList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.HistoryList::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+.HistoryList.light::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+
+.HistoryList.dark::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.HistoryList.light::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}
+
+.HistoryList.dark::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* Анимация появления элементов истории */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.HistoryList li {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.HistoryList li:nth-child(1) { animation-delay: 0.1s; }
+.HistoryList li:nth-child(2) { animation-delay: 0.2s; }
+.HistoryList li:nth-child(3) { animation-delay: 0.3s; }
+/* и так далее... */
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .HistoryHeader {
+        padding: 12px;
+    }
+    
+    .HistoryHeader h3 {
+        font-size: 1.1rem;
+    }
+    
+    .HistoryList li {
+        padding: 10px 12px;
+    }
+    
+    .HistoryCalculation {
+        font-size: 0.95rem;
+    }
+    
+    .HistoryResult {
+        font-size: 1.1rem;
+    }
+    
+    .HistoryTime {
+        font-size: 0.75rem;
+    }
+    
+    /* Уменьшаем скроллбар на мобильных */
+    .HistoryList::-webkit-scrollbar {
+        width: 5px;
+    }
+}

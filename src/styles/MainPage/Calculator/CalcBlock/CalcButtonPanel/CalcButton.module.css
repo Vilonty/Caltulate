@@ -1,0 +1,121 @@
+/* styles/MainPage/Calculator/CalcBlock/CalcButtonPanel/CalcButton.module.css */
+
+.CalcButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .CalcButton {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .CalcButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .CalcButton:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Light theme */
+  .light {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .light:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Dark theme */
+  .dark {
+    background-color: #444;
+    color: #f0f0f0;
+  }
+  
+  .dark:hover {
+    background-color: #555;
+  }
+  
+  /* Operator buttons */
+  .operator {
+    background-color: #feb34a;
+    color: white;
+  }
+  
+  .operator:hover {
+    background-color: #feb34a;
+  }
+  
+  .dark .operator {
+    background-color: #feb34a;
+  }
+  
+  .dark .operator:hover {
+    background-color: #feb34a;
+  }
+  
+  /* Function buttons (AC, DEL) */
+  .function {
+    background-color: #a5a5a5;
+    color: black;
+  }
+  
+  .function:hover {
+    background-color: #bbbbbb;
+  }
+  
+  .dark .function {
+    background-color: #7d7d7d;
+    color: white;
+  }
+  
+  .dark .function:hover {
+    background-color: #7d7d7d;
+  }
+  
+  /* History button */
+  .history {
+    background-color: #45ba62;
+    color: white;
+  }
+  
+  .history:hover {
+    background-color: #45ba62;
+  }
+  
+  .dark .history {
+    background-color: #45ba62;
+  }
+  
+  .dark .history:hover {
+    background-color: #45ba62;
+  }
+  
+  /* Active state */
+  .active {
+    transform: translateY(0);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #4f8ac9;
+    color: white;
+  }
+  
+  .dark .active {
+    background-color: #4f8ac9;
+  }

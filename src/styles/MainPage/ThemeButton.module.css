@@ -1,0 +1,41 @@
+.ThemeButtonContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+  
+  .ThemeButton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Light theme styles */
+  .ThemeButton.light {
+    background-color: #ff6b9d;
+    color: white;
+  }
+  
+  .ThemeButton.light:hover {
+    background-color: #ff4785;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dark theme styles */
+  .ThemeButton.dark {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .ThemeButton.dark:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
