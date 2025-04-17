@@ -1,16 +1,24 @@
 # Калькулятор
 
-ааа
+## Цель проекта
 
-## 2
+Целью проекта было научится работать в команде, и совсемтно написать веб-приложение "Калькулятор".
+Практика включает себя:
 
-ааа
+ 1) Распределение ролей в команде.
+ 2) Использование фреймворка react.
+ 3) Разбиение калькулятора на компоненты.
 
-### 3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Инструкция по установке
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Скачивание
+
+Вначале необходимо установить node.js с официального сайта: https://nodejs.org/en
+а так же git: https://git-scm.com/downloads
+Это нужно для дальнейшей установки приложения.
+
+#### Клонирование репозитория
+
+
 
